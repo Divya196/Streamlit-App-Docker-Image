@@ -19,19 +19,31 @@ sudo usermod -aG docker ubuntu
 
 newgrp docker
 
-git clone "your-project"
+#To clone from Github Repository 
+
+git clone https://github.com/Divya196/Streamlit-App-Docker-Image.git
+
+#Building Docker Image
 
 docker build -t divyaramesh196/stapp:latest . 
 
+#Listing the docker images present
+
 docker images -a  
+
+#After executing the below command,we can use Public IPv4 address to run the application 
 
 docker run -d -p 8501:8501 divyaramesh196/stapp 
 
-docker ps  
+docker ps #get the container_id 
 
-docker stop container_id 
+docker stop "container_id" 
+
+#Removing the docker images
 
 docker rm $(docker ps -a -q)
+
+#Login into docker hub and pushing the docker image,later we can pull the image from docker hub.
 
 docker login 
 
