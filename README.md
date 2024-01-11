@@ -2,7 +2,7 @@ Streamlit app Docker Image
 
 1. Login with your AWS console and launch an EC2 instance
 2. Run the following commands
-3. 
+ 
 Note: Do the port mapping to this port:- 8501
 
 sudo apt-get update -y
